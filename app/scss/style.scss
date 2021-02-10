@@ -1,1 +1,187 @@
+@import "vars";
 @import "global";
+
+
+// header start
+
+.header{
+    background-color: #fffdfd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .header-container{
+        max-width: 1730px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        padding-top: 31px;
+        padding-bottom: 36px;
+    }
+    &__items--left{
+        display: flex;
+        align-items: flex-end;
+    }
+    &__logo{
+        margin-right: 114px;
+    }
+}
+.menu-dropdown{
+    // display: inline-block;
+    position: relative;
+    &:hover{
+        .menu-dropdown__list{
+            display: block;
+            opacity: 1;
+            z-index: 1;
+            
+        }
+       .menu-dropdown__name{
+           background-color: $pink;
+           &::before{
+            transform: translateY(-50%) rotate(0deg);
+           }
+       }
+    }
+    &__name{
+        font-weight: 600;
+        line-height: 26px;
+        border: 2px solid #5C75D6;
+        border-radius:  100px;
+        padding: 15px 136px 15px 26px;
+        cursor: pointer;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 7px;
+            background-image: url('../images/icons/top-arrow.svg');
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    &__list-wrapper{
+        padding-top: 14px;
+        
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+    &__list{   
+        opacity: 0;
+        z-index: -1;
+        display: none;
+        border-radius: 5px;
+        padding-left: 17px;
+        padding-right: 31px;
+        background-color: $pink;
+    }
+    &__item{
+        color: $purple;
+      
+        
+        font-weight: 700;
+        &:not(:last-child){
+            border-bottom: 2px solid #FFF3F7;
+            
+        }
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 64px;
+        height: 98px;
+        position: relative;
+        &:hover{
+            color: $text-accent;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 41px;
+            height: 41px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &--plan{
+            &::before{
+                background-image: url('../images/icons/plan.svg');
+            }
+        }
+        &--pregnancy{
+            &::before{
+                background-image: url('../images/icons/pregnancy.svg');
+            }
+        }
+        &--feeding{
+            &::before{
+                background-image: url('../images/icons/feeding.svg');
+            }
+        }
+    }
+}
+.menu{
+    &__list{
+        
+    }
+    &__item{
+        display: inline-block;
+        margin-right: 40px;
+        font-weight: 600;
+        color: #60355a;
+        &:hover{
+            color: $text-accent;
+        }
+    }
+    &__btn{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        
+    }
+}
+
+// header end
+
+// .slider-item{
+//     width: 100px;
+//     height: 100px;
+//     &--1{
+//         background-color: tomato;
+
+//     }
+//     &--2{
+//         background-color: green;
+
+//     }
+//     &--3{
+//         background-color: blue;
+
+//     }
+// }
+// .slick-slide.slick-current.slick-center{
+//     .menu-slider{
+
+//     }
+//     .menu-slider__item{
+//         position: relative;
+//         &::before{
+//             content: '';
+//             position: absolute;
+//             background: url('../images/slider-dots.svg');
+//             width: 97px;
+//             height: 71px;
+//             background-size: cover;
+//             background-position: center center;
+//             z-index: -1;
+//         }
+//     }
+// }

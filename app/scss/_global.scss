@@ -1,7 +1,13 @@
 html{
     box-sizing: border-box;
 }
-
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    color: #27325a;
+}
 *::before,
 *::after{
     box-sizing: inherit;
@@ -24,4 +30,35 @@ h4,
 h5,
 h6{
     margin: 0;
+}
+.container{
+    max-width: 1430px;
+    margin:  0 auto;
+    padding: 0 15px;
+}
+.btn{
+    border-radius: 100px;
+    padding-top: 20px;
+    padding-bottom: 28px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    &.btn--blu{
+       
+        padding-left: 50px;
+        padding-right: 51px;
+        color: #fff;
+        background-color: $blu;
+        box-shadow: 17px 21px 41px rgba(92, 117, 214, 0.18);
+        &:hover{
+            background-color:#415DC8;;
+        }
+    }
+    &.btn--pink{
+        
+      padding-left: 47px;
+      padding-top: 45px;
+      background-color: #FEDEE9;  
+      color: $text-accent;
+    }
 }
